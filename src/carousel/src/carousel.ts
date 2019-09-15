@@ -1,4 +1,6 @@
-﻿import './carousel.less';
+﻿import '@webcomponents/webcomponentsjs';
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';
+import './carousel.less';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
@@ -31,13 +33,16 @@ export class CarouselComponent extends HTMLElement {
     get template(): TemplateResult {
         return html`
             <div class="carousel-${this._guid} owl-carousel">
-                ${repeat(this._items, i => html`
-                    <div class="carousel__item">
-                        <img src="${i.imageUrl}" />
-                    </div>
-                `)}
+                ${repeat(this._items, i => this.getItemTemplate(i))}
             </div>
         `;
+    }
+
+    getItemTemplate(viewModel):TemplateResult {
+        return html`
+            <div class="carousel__item">
+                <img src="${viewModel.imageUrl}" />
+            </div>`;
     }
 
     attributeChangedCallback(name, oldValue, newValue) {

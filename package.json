@@ -10,8 +10,12 @@
   "author": "Quinntyne Brown",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
     "@types/jquery": "^3.3.31",
     "@types/owl.carousel": "^2.3.1",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "concurrently": "^4.1.2",
     "css-loader": "^3.2.0",

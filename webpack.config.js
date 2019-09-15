@@ -1,7 +1,8 @@
 ﻿const path = require("path");
 
 module.exports = {
-    mode:"development",
+    mode: "development",
+    devtool:'none',
     entry: {
         carousel: './src/carousel/src/carousel.ts',
     },
@@ -15,6 +16,15 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.m?js$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
             {
                 test: /\.ts?$/,
                 use: 'ts-loader',
@@ -31,8 +41,7 @@ module.exports = {
                     {
                         loader: 'less-loader',
                         options: {
-                            strictMath: true,
-                            noIeCompat: true,
+                            strictMath: true
                         },
                     }
                 ],
