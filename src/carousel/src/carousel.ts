@@ -38,17 +38,16 @@ export class CarouselComponent extends HTMLElement {
         `;
     }
 
-    getItemTemplate(viewModel):TemplateResult {
+    getItemTemplate(vm):TemplateResult {
         return html`
             <div class="carousel__item">
-                <img src="${viewModel.imageUrl}" />
+                <img src="${vm.imageUrl}" />
             </div>`;
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         if (name == "items")
             this._items = JSON.parse(newValue);
-
     }
 }
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trader.WebComponents", "Trader.WebComponents.csproj", "{70205495-ADFB-411B-B50F-5F22648E1036}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carousel", "Carousel.csproj", "{70205495-ADFB-411B-B50F-5F22648E1036}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -39,6 +39,9 @@ module.exports = {
                         loader: 'css-loader',
                     },
                     {
+                        loader: 'postcss-loader'
+                    },
+                    {
                         loader: 'less-loader',
                         options: {
                             strictMath: true
@@ -54,6 +57,9 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader',
+                    },
+                    {
+                        loader: 'postcss-loader'
                     }
                 ],
             },
