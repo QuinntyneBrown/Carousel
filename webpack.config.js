@@ -36,6 +36,36 @@ module.exports = {
                         },
                     }
                 ],
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'css-loader',
+                    }
+                ],
+            },
+            {
+                test: /\.png$/,
+                loader: "url-loader?mimetype=image/png"
+            },
+            {
+                test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'static/media/[name].[hash:8].[ext]'
+                }
+            },
+            {
+                test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 10000,
+                    name: 'static/media/[name].[hash:8].[ext]'
+                }
             }
         ]
     },

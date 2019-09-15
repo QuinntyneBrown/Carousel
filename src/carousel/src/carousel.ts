@@ -1,4 +1,6 @@
 ﻿import './carousel.less';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 
 import { html, TemplateResult, render } from 'lit-html';
 import { repeat } from 'lit-html/directives/repeat';
@@ -20,8 +22,8 @@ export class CarouselComponent extends HTMLElement {
             items:2,
             nav: true,
             navText: [
-                "<a class='nav-btn prev-slide'><i class=' fa fa-chevron-left '></i></a>",
-                "<a class='nav-btn next-slide'><i class='fa fa-chevron-right'></i></a>"],
+                "<a class='nav-btn prev-slide'><i class=' fa fa-angle-left '></i></a>",
+                "<a class='nav-btn next-slide'><i class='fa fa-angle-right'></i></a>"],
             dots: false
         });
     }

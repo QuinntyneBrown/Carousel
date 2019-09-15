@@ -1,0 +1,36 @@
+ce-carousel {
+    display:block;
+    max-height:300px;
+    max-width:400px;
+
+    img {
+        max-height:300px;
+        width:auto;
+        height:auto;
+    }
+    .owl-carousel .nav-btn {
+        cursor: pointer;
+        font-size: 48px;
+        height: 50px;
+        line-height: 50px;
+        position: absolute;
+        text-align: center;
+        top: 73.5px !important;
+        width: 25px;
+        z-index: 9999;
+    }
+
+    .owl-carousel .owl-prev.disabled,
+    .owl-carousel .owl-next.disabled {
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .owl-carousel .prev-slide {
+        left: 0px;
+    }
+
+    .owl-carousel .next-slide {
+        right: 0px;
+    }
+}
