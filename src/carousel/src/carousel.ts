@@ -17,6 +17,7 @@ export class CarouselComponent extends HTMLElement {
 
         $(`.carousel-${this._guid}`).owlCarousel({
             margin: 10,
+            items:2,
             nav: true,
             navText: [
                 "<a class='nav-btn prev-slide'><i class=' fa fa-chevron-left '></i></a>",
@@ -29,7 +30,6 @@ export class CarouselComponent extends HTMLElement {
         return html`
             <div class="carousel-${this._guid} owl-carousel">
                 ${repeat(this._items, i => html`
-                
                     <div class="carousel__item">
                         <img src="${i.imageUrl}" />
                     </div>
